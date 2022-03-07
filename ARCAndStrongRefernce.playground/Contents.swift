@@ -14,7 +14,6 @@ class Person1 {
     deinit{
         print("deinit called for person1 class")
     }
-
 }
 var obj1 : Person1?
 var obj2 : Person1?
@@ -23,7 +22,7 @@ var obj2 : Person1?
 if (1 == 1){
     let obj = Person1(name: "Bipp")
   obj1 = obj
-obj2 = obj
+  obj2 = obj
     obj.displayName()
 }
 obj1?.displayName()
@@ -34,7 +33,7 @@ obj2 = nil
 
 class Person {
     let name: String
-  weak var job : Job?
+   var job : Job?
     init(name: String) {
         self.name = name
         print("init called for person class")
@@ -50,7 +49,7 @@ class Person {
 }
 class  Job{
     let jobDescription:String
-   weak var person : Person?//here weak keyword are used to avoid strong refence cycle
+    weak var person : Person?//here weak keyword are used to avoid strong refence cycle
     init(_jobDescription:String){
         self.jobDescription = _jobDescription
         print("init called for job class")

@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B09D08644D44C2FAA1DE670 /* Pods_ReviseGADemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED44036016040D4EF003D56 /* Pods_ReviseGADemo.framework */; };
+		840F918B27C509C300B7F061 /* FirebaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F918A27C509C300B7F061 /* FirebaseTableViewCell.swift */; };
+		8433786427BF92B50014386C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433786327BF92B50014386C /* AppDelegate.swift */; };
+		8433786627BF92B50014386C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433786527BF92B50014386C /* SceneDelegate.swift */; };
+		8433786827BF92B50014386C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433786727BF92B50014386C /* ViewController.swift */; };
+		8433786B27BF92B50014386C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433786927BF92B50014386C /* Main.storyboard */; };
+		8433786D27BF92B70014386C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8433786C27BF92B70014386C /* Assets.xcassets */; };
+		8433787027BF92B70014386C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433786E27BF92B70014386C /* LaunchScreen.storyboard */; };
+		8433787827BF93800014386C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8433787727BF93800014386C /* GoogleService-Info.plist */; };
+		843DCB6727C63E8700643C52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DCB6627C63E8700643C52 /* HomeViewController.swift */; };
+		843DCB6927C6600900643C52 /* ModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DCB6827C6600900643C52 /* ModelClass.swift */; };
+		84E3F56C27C7B37500A5E200 /* FireStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3F56B27C7B37500A5E200 /* FireStoreViewController.swift */; };
+		84E8BEB127C7536200C15554 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8BEB027C7536200C15554 /* ViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4ED44036016040D4EF003D56 /* Pods_ReviseGADemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviseGADemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840F918A27C509C300B7F061 /* FirebaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTableViewCell.swift; sourceTree = "<group>"; };
+		8433786027BF92B50014386C /* ReviseGADemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviseGADemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8433786327BF92B50014386C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8433786527BF92B50014386C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8433786727BF92B50014386C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8433786A27BF92B50014386C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8433786C27BF92B70014386C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8433786F27BF92B70014386C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8433787127BF92B70014386C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8433787727BF93800014386C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		843DCB6627C63E8700643C52 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		843DCB6827C6600900643C52 /* ModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClass.swift; sourceTree = "<group>"; };
+		84E3F56B27C7B37500A5E200 /* FireStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreViewController.swift; sourceTree = "<group>"; };
+		84E8BEB027C7536200C15554 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9B376618C16123DBB909B8F1 /* Pods-ReviseGADemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviseGADemo.debug.xcconfig"; path = "Target Support Files/Pods-ReviseGADemo/Pods-ReviseGADemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F426DA8680F14F4DAED3A733 /* Pods-ReviseGADemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviseGADemo.release.xcconfig"; path = "Target Support Files/Pods-ReviseGADemo/Pods-ReviseGADemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8433785D27BF92B50014386C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B09D08644D44C2FAA1DE670 /* Pods_ReviseGADemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BCA5BAEB2BAF66797798D0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B376618C16123DBB909B8F1 /* Pods-ReviseGADemo.debug.xcconfig */,
+				F426DA8680F14F4DAED3A733 /* Pods-ReviseGADemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8433785727BF92B50014386C = {
+			isa = PBXGroup;
+			children = (
+				84E3F56D27C7B38600A5E200 /* Controllers */,
+				84E3F57027C7B3F200A5E200 /* Model */,
+				840F918A27C509C300B7F061 /* FirebaseTableViewCell.swift */,
+				8433786227BF92B50014386C /* ReviseGADemo */,
+				8433786127BF92B50014386C /* Products */,
+				5BCA5BAEB2BAF66797798D0F /* Pods */,
+				F675421C8DB1563774E3D1BC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8433786127BF92B50014386C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8433786027BF92B50014386C /* ReviseGADemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8433786227BF92B50014386C /* ReviseGADemo */ = {
+			isa = PBXGroup;
+			children = (
+				8433787727BF93800014386C /* GoogleService-Info.plist */,
+				8433786327BF92B50014386C /* AppDelegate.swift */,
+				8433786527BF92B50014386C /* SceneDelegate.swift */,
+				8433786927BF92B50014386C /* Main.storyboard */,
+				8433786C27BF92B70014386C /* Assets.xcassets */,
+				8433786E27BF92B70014386C /* LaunchScreen.storyboard */,
+				8433787127BF92B70014386C /* Info.plist */,
+				84E3F56F27C7B3CD00A5E200 /* ViewModel */,
+			);
+			path = ReviseGADemo;
+			sourceTree = "<group>";
+		};
+		84E3F56D27C7B38600A5E200 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84E3F56B27C7B37500A5E200 /* FireStoreViewController.swift */,
+				843DCB6627C63E8700643C52 /* HomeViewController.swift */,
+				8433786727BF92B50014386C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84E3F56F27C7B3CD00A5E200 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84E8BEB027C7536200C15554 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84E3F57027C7B3F200A5E200 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				843DCB6827C6600900643C52 /* ModelClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F675421C8DB1563774E3D1BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ED44036016040D4EF003D56 /* Pods_ReviseGADemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8433785F27BF92B50014386C /* ReviseGADemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8433787427BF92B70014386C /* Build configuration list for PBXNativeTarget "ReviseGADemo" */;
+			buildPhases = (
+				9C400D982C9B348FF8324957 /* [CP] Check Pods Manifest.lock */,
+				8433785C27BF92B50014386C /* Sources */,
+				8433785D27BF92B50014386C /* Frameworks */,
+				8433785E27BF92B50014386C /* Resources */,
+				A2AA938F8A179C2991A2C23E /* [CP] Embed Pods Frameworks */,
+				8433787927BF978E0014386C /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReviseGADemo;
+			productName = ReviseGADemo;
+			productReference = 8433786027BF92B50014386C /* ReviseGADemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8433785827BF92B50014386C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					8433785F27BF92B50014386C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8433785B27BF92B50014386C /* Build configuration list for PBXProject "ReviseGADemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8433785727BF92B50014386C;
+			productRefGroup = 8433786127BF92B50014386C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8433785F27BF92B50014386C /* ReviseGADemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8433785E27BF92B50014386C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8433787027BF92B70014386C /* LaunchScreen.storyboard in Resources */,
+				8433787827BF93800014386C /* GoogleService-Info.plist in Resources */,
+				8433786D27BF92B70014386C /* Assets.xcassets in Resources */,
+				8433786B27BF92B50014386C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8433787927BF978E0014386C /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n\n";
+		};
+		9C400D982C9B348FF8324957 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReviseGADemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2AA938F8A179C2991A2C23E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReviseGADemo/Pods-ReviseGADemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReviseGADemo/Pods-ReviseGADemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReviseGADemo/Pods-ReviseGADemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8433785C27BF92B50014386C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843DCB6727C63E8700643C52 /* HomeViewController.swift in Sources */,
+				8433786827BF92B50014386C /* ViewController.swift in Sources */,
+				84E3F56C27C7B37500A5E200 /* FireStoreViewController.swift in Sources */,
+				8433786427BF92B50014386C /* AppDelegate.swift in Sources */,
+				840F918B27C509C300B7F061 /* FirebaseTableViewCell.swift in Sources */,
+				843DCB6927C6600900643C52 /* ModelClass.swift in Sources */,
+				8433786627BF92B50014386C /* SceneDelegate.swift in Sources */,
+				84E8BEB127C7536200C15554 /* ViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8433786927BF92B50014386C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8433786A27BF92B50014386C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8433786E27BF92B70014386C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8433786F27BF92B70014386C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8433787227BF92B70014386C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8433787327BF92B70014386C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8433787527BF92B70014386C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B376618C16123DBB909B8F1 /* Pods-ReviseGADemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReviseGADemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Bipp.ReviseGADemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8433787627BF92B70014386C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F426DA8680F14F4DAED3A733 /* Pods-ReviseGADemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReviseGADemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Bipp.ReviseGADemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8433785B27BF92B50014386C /* Build configuration list for PBXProject "ReviseGADemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8433787227BF92B70014386C /* Debug */,
+				8433787327BF92B70014386C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8433787427BF92B70014386C /* Build configuration list for PBXNativeTarget "ReviseGADemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8433787527BF92B70014386C /* Debug */,
+				8433787627BF92B70014386C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8433785827BF92B50014386C /* Project object */;
+}
