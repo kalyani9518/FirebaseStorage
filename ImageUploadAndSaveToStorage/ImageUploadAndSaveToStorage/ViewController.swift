@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         indicator.startAnimating()
-        viewModelClass().downLoadingImage { imageArr, url in
+        ViewModelClass().downLoadingImage { imageArr, url in
              self.imageArr = imageArr
             self.url = url
             self.indicator.stopAnimating()
@@ -38,7 +38,13 @@ class ViewController: UIViewController {
         test()
             
     }
+    @IBAction func NextVC(_ sender: Any) {
+        if let googleSignInViewController = storyboard?.instantiateViewController(withIdentifier: "GoogleSignInViewController") as? GoogleSignInViewController{
+            self.navigationController?.pushViewController(googleSignInViewController, animated: true)
+        }
+    }
     @IBOutlet weak var segmentControlOutlet: UISegmentedControl!
+    
     @IBAction func segControlAction(_ sender: Any) {
         switch segmentControlOutlet.selectedSegmentIndex
                 {
@@ -80,19 +86,19 @@ extension ViewController:UIDocumentPickerDelegate{
         let last = myURL.pathExtension
         self.url.append(myURL)
         if last == "pdf"  {
-            viewModelClass().uploadFile(myURL: myURL, extensionStr: ".pdf")
+            ViewModelClass().uploadFile(myURL: myURL, extensionStr: ".pdf")
         }
         else if last == "doc"{
-            viewModelClass().uploadFile(myURL: myURL, extensionStr: ".doc")
+            ViewModelClass().uploadFile(myURL: myURL, extensionStr: ".doc")
             }
         else if last == "docx"{
-            viewModelClass().uploadFile(myURL: myURL, extensionStr: ".docx")
+            ViewModelClass().uploadFile(myURL: myURL, extensionStr: ".docx")
             
         } else if last == "xls"{
-            viewModelClass().uploadFile(myURL: myURL, extensionStr: ".xls")
+            ViewModelClass().uploadFile(myURL: myURL, extensionStr: ".xls")
                 }
         else if last == "jpg"{
-            viewModelClass().uploadFile(myURL: myURL, extensionStr: ".xls")
+            ViewModelClass().uploadFile(myURL: myURL, extensionStr: ".xls")
                 }
     
     func documentPicker(controller: UIDocumentPickerViewController, didPickDocumentAtURL url: NSURL) {

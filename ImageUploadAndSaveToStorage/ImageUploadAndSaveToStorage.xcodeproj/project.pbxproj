@@ -14,11 +14,14 @@
 		843C22C927CCDB8200CE9ACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843C22C727CCDB8200CE9ACB /* Main.storyboard */; };
 		843C22CB27CCDB8400CE9ACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843C22CA27CCDB8400CE9ACB /* Assets.xcassets */; };
 		843C22CE27CCDB8400CE9ACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843C22CC27CCDB8400CE9ACB /* LaunchScreen.storyboard */; };
+		843FF04F27D7225000B99DF7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF04E27D7225000B99DF7 /* Model.swift */; };
+		843FF05127D741B100B99DF7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF05027D741B100B99DF7 /* SignInViewController.swift */; };
+		843FF05327D7943600B99DF7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF05227D7943600B99DF7 /* SignUpViewController.swift */; };
 		844105AB27D271290017E144 /* WebKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844105AA27D271290017E144 /* WebKitViewController.swift */; };
 		8457628727CD0FF100E5296A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8457628627CD0FF100E5296A /* GoogleService-Info.plist */; };
 		84B55F9527D210B300E70AE4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B55F9427D210B300E70AE4 /* ViewModel.swift */; };
 		84B55F9727D24F3000E70AE4 /* PdfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B55F9627D24F3000E70AE4 /* PdfCollectionViewCell.swift */; };
-		84B55F9927D24F4B00E70AE4 /* PdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B55F9827D24F4B00E70AE4 /* PdfViewController.swift */; };
+		84B55F9927D24F4B00E70AE4 /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B55F9827D24F4B00E70AE4 /* GoogleSignInViewController.swift */; };
 		84BCBAB327CE065F00255E39 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCBAB227CE065F00255E39 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,11 +35,14 @@
 		843C22CA27CCDB8400CE9ACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843C22CD27CCDB8400CE9ACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843C22CF27CCDB8400CE9ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843FF04E27D7225000B99DF7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		843FF05027D741B100B99DF7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		843FF05227D7943600B99DF7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		844105AA27D271290017E144 /* WebKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitViewController.swift; sourceTree = "<group>"; };
 		8457628627CD0FF100E5296A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84B55F9427D210B300E70AE4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		84B55F9627D24F3000E70AE4 /* PdfCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfCollectionViewCell.swift; sourceTree = "<group>"; };
-		84B55F9827D24F4B00E70AE4 /* PdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewController.swift; sourceTree = "<group>"; };
+		84B55F9827D24F4B00E70AE4 /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
 		84BCBAB227CE065F00255E39 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		964560CC315C59D666943749 /* Pods-ImageUploadAndSaveToStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageUploadAndSaveToStorage.debug.xcconfig"; path = "Target Support Files/Pods-ImageUploadAndSaveToStorage/Pods-ImageUploadAndSaveToStorage.debug.xcconfig"; sourceTree = "<group>"; };
 		A7D21E2968147459E8B250C2 /* Pods_ImageUploadAndSaveToStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageUploadAndSaveToStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,8 +63,10 @@
 		843C22B527CCDB8200CE9ACB = {
 			isa = PBXGroup;
 			children = (
+				843FF05227D7943600B99DF7 /* SignUpViewController.swift */,
+				843FF05027D741B100B99DF7 /* SignInViewController.swift */,
 				844105AA27D271290017E144 /* WebKitViewController.swift */,
-				84B55F9827D24F4B00E70AE4 /* PdfViewController.swift */,
+				84B55F9827D24F4B00E70AE4 /* GoogleSignInViewController.swift */,
 				843C22C027CCDB8200CE9ACB /* ImageUploadAndSaveToStorage */,
 				843C22BF27CCDB8200CE9ACB /* Products */,
 				C8045788911C9B891198D103 /* Pods */,
@@ -88,6 +96,7 @@
 				84BCBAB227CE065F00255E39 /* CollectionViewCell.swift */,
 				84B55F9627D24F3000E70AE4 /* PdfCollectionViewCell.swift */,
 				84B55F9427D210B300E70AE4 /* ViewModel.swift */,
+				843FF04E27D7225000B99DF7 /* Model.swift */,
 			);
 			path = ImageUploadAndSaveToStorage;
 			sourceTree = "<group>";
@@ -225,7 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B55F9927D24F4B00E70AE4 /* PdfViewController.swift in Sources */,
+				843FF05327D7943600B99DF7 /* SignUpViewController.swift in Sources */,
+				843FF04F27D7225000B99DF7 /* Model.swift in Sources */,
+				84B55F9927D24F4B00E70AE4 /* GoogleSignInViewController.swift in Sources */,
 				84B55F9527D210B300E70AE4 /* ViewModel.swift in Sources */,
 				844105AB27D271290017E144 /* WebKitViewController.swift in Sources */,
 				843C22C627CCDB8200CE9ACB /* ViewController.swift in Sources */,
@@ -233,6 +244,7 @@
 				84B55F9727D24F3000E70AE4 /* PdfCollectionViewCell.swift in Sources */,
 				84BCBAB327CE065F00255E39 /* CollectionViewCell.swift in Sources */,
 				843C22C427CCDB8200CE9ACB /* SceneDelegate.swift in Sources */,
+				843FF05127D741B100B99DF7 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
