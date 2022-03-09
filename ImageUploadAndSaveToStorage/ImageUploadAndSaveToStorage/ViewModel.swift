@@ -16,8 +16,8 @@ class ViewModelClass{
     let storageRef = Storage.storage().reference()
     var imageArr: [Data] = [Data]()
     var url = [URL]()
-    func downLoadingImage(completion:@escaping(_ imageArr:[Data],_ url:[URL])->()){
-        storageRef.child("Document").listAll { storeReference, error in
+    func downLoadingImage(userID:String,completion:@escaping(_ imageArr:[Data],_ url:[URL])->()){
+        storageRef.child(userID).child("Document").listAll { storeReference, error in
             for item in storeReference.items{
                 let path = item.fullPath
                 print(item.fullPath)
@@ -75,8 +75,8 @@ class ViewModelClass{
             complisherHandler()
         }
     }
-    func uploadFile(myURL:URL,extensionStr:String){
-        storageRef.child("Document").child(UUID().uuidString + extensionStr).putFile(from: myURL, metadata: nil) { metadata, error in
+    func uploadFile(userID:String,myURL:URL,extensionStr:String){
+        storageRef.child(userID).child("Document").child(UUID().uuidString + extensionStr).putFile(from: myURL, metadata: nil) { metadata, error in
             guard let metadata = metadata else {
                 return
             }
@@ -97,7 +97,7 @@ class ViewModelClass{
             
             guard let authentication = user?.authentication,
                   let idToken = authentication.idToken else {return}
-            
+            let userId = user?.userID
             let credential = GoogleAuthProvider.credential(withIDToken: idToken,
                                                            accessToken: authentication.accessToken)
             Auth.auth().signIn(with: credential) { authResult, error in
@@ -128,7 +128,7 @@ class ViewModelClass{
             }
         }
     }
-    func registerNewUser(withEmail email: String, password: String, name: String, complesherHandler:@escaping ()->()) {
+    func registerNewUser(withEmail email: String, password: String, name: String, complesherHandler:@escaping (_ user:User)->()) {
         
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] auth, error in
             if error == nil {
@@ -137,7 +137,7 @@ class ViewModelClass{
                 changeRequest?.commitChanges { [weak self] error in
                     print("Account Created")
                     self?.user = auth?.user
-                    complesherHandler()
+                    complesherHandler((self?.user)!)
                 }
             } else {
                 print(error!.localizedDescription)

@@ -8,7 +8,7 @@
 import UIKit
 
 class SignInViewController: UIViewController {
-    
+    var userId :String?
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -35,18 +35,19 @@ class SignInViewController: UIViewController {
                 self?.signInBtn.isEnabled = true
                 self?.activityIndicator.stopAnimating()
                 self!.showAlert(title: "Alert", message: "Login successFully")
-               
+                
             }
         }
     }
     
     @IBAction func signUpBtnAction(_ sender: Any) {
         if let signUpViewControllerObj = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController {
+            signUpViewControllerObj.userId = userId
             navigationController?.pushViewController(signUpViewControllerObj, animated: true)
         }
     }
     
-   
+    
     
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -55,5 +56,5 @@ class SignInViewController: UIViewController {
     }
     
     
-   
+    
 }

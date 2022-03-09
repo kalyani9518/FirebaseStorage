@@ -63,10 +63,6 @@
 		843C22B527CCDB8200CE9ACB = {
 			isa = PBXGroup;
 			children = (
-				843FF05227D7943600B99DF7 /* SignUpViewController.swift */,
-				843FF05027D741B100B99DF7 /* SignInViewController.swift */,
-				844105AA27D271290017E144 /* WebKitViewController.swift */,
-				84B55F9827D24F4B00E70AE4 /* GoogleSignInViewController.swift */,
 				843C22C027CCDB8200CE9ACB /* ImageUploadAndSaveToStorage */,
 				843C22BF27CCDB8200CE9ACB /* Products */,
 				C8045788911C9B891198D103 /* Pods */,
@@ -88,17 +84,61 @@
 				8457628627CD0FF100E5296A /* GoogleService-Info.plist */,
 				843C22C127CCDB8200CE9ACB /* AppDelegate.swift */,
 				843C22C327CCDB8200CE9ACB /* SceneDelegate.swift */,
-				843C22C527CCDB8200CE9ACB /* ViewController.swift */,
-				843C22C727CCDB8200CE9ACB /* Main.storyboard */,
+				8477885B27D8666300DEF94C /* Controllers */,
+				8477885F27D8671000DEF94C /* View */,
 				843C22CA27CCDB8400CE9ACB /* Assets.xcassets */,
-				843C22CC27CCDB8400CE9ACB /* LaunchScreen.storyboard */,
 				843C22CF27CCDB8400CE9ACB /* Info.plist */,
-				84BCBAB227CE065F00255E39 /* CollectionViewCell.swift */,
-				84B55F9627D24F3000E70AE4 /* PdfCollectionViewCell.swift */,
-				84B55F9427D210B300E70AE4 /* ViewModel.swift */,
-				843FF04E27D7225000B99DF7 /* Model.swift */,
+				8477885E27D866F500DEF94C /* Cells */,
+				8477885C27D8668C00DEF94C /* ViewModel */,
+				8477885D27D8669A00DEF94C /* Model */,
 			);
 			path = ImageUploadAndSaveToStorage;
+			sourceTree = "<group>";
+		};
+		8477885B27D8666300DEF94C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84B55F9827D24F4B00E70AE4 /* GoogleSignInViewController.swift */,
+				844105AA27D271290017E144 /* WebKitViewController.swift */,
+				843C22C527CCDB8200CE9ACB /* ViewController.swift */,
+				843FF05027D741B100B99DF7 /* SignInViewController.swift */,
+				843FF05227D7943600B99DF7 /* SignUpViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8477885C27D8668C00DEF94C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84B55F9427D210B300E70AE4 /* ViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		8477885D27D8669A00DEF94C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				843FF04E27D7225000B99DF7 /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8477885E27D866F500DEF94C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84BCBAB227CE065F00255E39 /* CollectionViewCell.swift */,
+				84B55F9627D24F3000E70AE4 /* PdfCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		8477885F27D8671000DEF94C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				843C22C727CCDB8200CE9ACB /* Main.storyboard */,
+				843C22CC27CCDB8400CE9ACB /* LaunchScreen.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		8F60F18861D251E3BCECBA33 /* Frameworks */ = {

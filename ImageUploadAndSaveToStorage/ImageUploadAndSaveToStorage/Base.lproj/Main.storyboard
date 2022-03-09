@@ -12,13 +12,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageUploadAndSaveToStorage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ImageUploadAndSaveToStorage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hqt-9v-3bj">
-                                <rect key="frame" x="10" y="98" width="394" height="32"/>
+                                <rect key="frame" x="10" y="54" width="394" height="32"/>
                                 <segments>
                                     <segment title="Images"/>
                                     <segment title="Files"/>
@@ -28,7 +28,7 @@
                                 </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-Bz-Nyf">
-                                <rect key="frame" x="0.0" y="134" width="414" height="762"/>
+                                <rect key="frame" x="0.0" y="90" width="414" height="806"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="K5t-gs-CQO">
                                     <size key="itemSize" width="189" height="181"/>
@@ -121,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="46"/>
+            <point key="canvasLocation" x="1488" y="46"/>
         </scene>
         <!--Google Sign In View Controller-->
         <scene sceneID="ubf-a3-1dl">
@@ -172,46 +172,40 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="q8B-Ds-hBS">
-                                <rect key="frame" x="10" y="752" width="394" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEl-OL-jWy">
+                                <rect key="frame" x="20" y="752" width="374" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDY-tR-hZF">
-                                        <rect key="frame" x="0.0" y="14" width="192" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pX-NI-J4k">
+                                        <rect key="frame" x="69.5" y="15.5" width="235" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Login with email"/>
+                                        <state key="normal" title=" SignIn with Google" image="output-onlinepngtools"/>
                                         <connections>
-                                            <action selector="nextToVc:" destination="VU0-nQ-c81" eventType="touchUpInside" id="KBQ-AJ-IOx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igY-Wa-dZn">
-                                        <rect key="frame" x="202" y="0.0" width="192" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="TpE-nT-2nt"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Sign in With Google" image="google.png"/>
-                                        <connections>
-                                            <action selector="btnAction:" destination="VU0-nQ-c81" eventType="touchUpInside" id="fgR-Jl-3U7"/>
+                                            <action selector="btnAction:" destination="VU0-nQ-c81" eventType="touchUpInside" id="QUb-Y1-OWn"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8pX-NI-J4k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oEl-OL-jWy" secondAttribute="leading" constant="10" id="G41-DG-eG5"/>
+                                    <constraint firstAttribute="height" constant="60" id="Xgq-q0-Ow9"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8pX-NI-J4k" secondAttribute="trailing" constant="10" id="ad2-vj-TQd"/>
+                                    <constraint firstItem="8pX-NI-J4k" firstAttribute="centerX" secondItem="oEl-OL-jWy" secondAttribute="centerX" id="bvo-su-nTY"/>
+                                    <constraint firstItem="8pX-NI-J4k" firstAttribute="centerY" secondItem="oEl-OL-jWy" secondAttribute="centerY" id="v4E-Zb-YSW"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TWS-9X-JIC"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
                             <constraint firstItem="TWS-9X-JIC" firstAttribute="trailing" secondItem="Fuy-qi-x6e" secondAttribute="trailing" constant="20" id="285-VD-ErM"/>
                             <constraint firstItem="fjB-KU-rj1" firstAttribute="centerY" secondItem="pfO-u9-xxu" secondAttribute="centerY" constant="-100" id="62H-ZZ-KRb"/>
-                            <constraint firstItem="TWS-9X-JIC" firstAttribute="bottom" secondItem="q8B-Ds-hBS" secondAttribute="bottom" constant="60" id="AI7-pU-kGV"/>
+                            <constraint firstItem="oEl-OL-jWy" firstAttribute="leading" secondItem="TWS-9X-JIC" secondAttribute="leading" constant="20" id="EYf-5u-Me3"/>
                             <constraint firstItem="fjB-KU-rj1" firstAttribute="leading" secondItem="TWS-9X-JIC" secondAttribute="leading" constant="20" id="HJt-va-N9m"/>
-                            <constraint firstItem="TWS-9X-JIC" firstAttribute="trailing" secondItem="q8B-Ds-hBS" secondAttribute="trailing" constant="10" id="J3Z-Q6-iKP"/>
+                            <constraint firstItem="TWS-9X-JIC" firstAttribute="trailing" secondItem="oEl-OL-jWy" secondAttribute="trailing" constant="20" id="JJB-76-5H0"/>
                             <constraint firstItem="Fuy-qi-x6e" firstAttribute="leading" secondItem="TWS-9X-JIC" secondAttribute="leading" constant="20" id="QAC-T5-6GS"/>
                             <constraint firstItem="TWS-9X-JIC" firstAttribute="trailing" secondItem="fjB-KU-rj1" secondAttribute="trailing" constant="20" id="fVt-Ye-6Sf"/>
-                            <constraint firstItem="q8B-Ds-hBS" firstAttribute="leading" secondItem="TWS-9X-JIC" secondAttribute="leading" constant="10" id="oot-2w-JXB"/>
+                            <constraint firstItem="TWS-9X-JIC" firstAttribute="bottom" secondItem="oEl-OL-jWy" secondAttribute="bottom" constant="50" id="lNC-yk-L2H"/>
                             <constraint firstItem="Fuy-qi-x6e" firstAttribute="centerY" secondItem="pfO-u9-xxu" secondAttribute="centerY" constant="50" id="uc6-tz-30K"/>
                         </constraints>
                     </view>
@@ -224,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="666-ZX-9Ij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2905.7971014492755" y="14.732142857142856"/>
+            <point key="canvasLocation" x="857" y="54"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="LnZ-0c-iTr">
@@ -263,7 +257,6 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <action selector="googleBtnAction:" destination="VU0-nQ-c81" eventType="touchUpInside" id="vas-e1-ePJ"/>
                                     <action selector="signInBtnAction:" destination="349-VT-q9d" eventType="touchUpInside" id="UzE-hL-RVr"/>
                                 </connections>
                             </button>
@@ -275,7 +268,6 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="googleBtnAction:" destination="VU0-nQ-c81" eventType="touchUpInside" id="zOX-9T-jcs"/>
                                     <action selector="signUpBtnAction:" destination="349-VT-q9d" eventType="touchUpInside" id="Qwx-ro-JkD"/>
                                 </connections>
                             </button>
@@ -365,7 +357,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Pbp-4I-n7e"/>
+                        <segue destination="VU0-nQ-c81" kind="relationship" relationship="rootViewController" id="JqC-O4-WEy"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVW-jK-v5D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -466,8 +458,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="google.png" width="18" height="18"/>
         <image name="icloud.and.arrow.up.fill" catalog="system" width="128" height="106"/>
+        <image name="output-onlinepngtools" width="30" height="23"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

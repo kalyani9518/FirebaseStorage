@@ -10,7 +10,7 @@ import FirebaseStorage
 import CoreServices
 class ViewController: UIViewController {
     @IBOutlet weak var menuBtn: UIButton!
-    
+    var userID : String?
     @IBOutlet weak var indicator : UIActivityIndicatorView!
     @IBOutlet weak var collectioView : UICollectionView!
     var url: [URL] = [URL](){
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         indicator.startAnimating()
-        ViewModelClass().downLoadingImage { imageArr, url in
+        ViewModelClass().downLoadingImage(userID: userID!) { imageArr, url in
              self.imageArr = imageArr
             self.url = url
             self.indicator.stopAnimating()
@@ -39,8 +39,9 @@ class ViewController: UIViewController {
             
     }
     @IBAction func NextVC(_ sender: Any) {
-        if let googleSignInViewController = storyboard?.instantiateViewController(withIdentifier: "GoogleSignInViewController") as? GoogleSignInViewController{
-            self.navigationController?.pushViewController(googleSignInViewController, animated: true)
+        if let signInViewController = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController{
+            signInViewController.userId = userID
+            self.navigationController?.pushViewController(signInViewController, animated: true)
         }
     }
     @IBOutlet weak var segmentControlOutlet: UISegmentedControl!
@@ -83,22 +84,25 @@ extension ViewController:UIDocumentPickerDelegate{
         guard let myURL = urls.first else {
             return
         }
+        guard let userID = self.userID else{
+            return
+        }
         let last = myURL.pathExtension
         self.url.append(myURL)
         if last == "pdf"  {
-            ViewModelClass().uploadFile(myURL: myURL, extensionStr: ".pdf")
+            ViewModelClass().uploadFile(userID: userID, myURL: myURL, extensionStr: ".pdf")
         }
         else if last == "doc"{
-            ViewModelClass().uploadFile(myURL: myURL, extensionStr: ".doc")
+            ViewModelClass().uploadFile(userID: userID, myURL: myURL, extensionStr: ".doc")
             }
         else if last == "docx"{
-            ViewModelClass().uploadFile(myURL: myURL, extensionStr: ".docx")
+            ViewModelClass().uploadFile(userID: userID, myURL: myURL, extensionStr: ".docx")
             
         } else if last == "xls"{
-            ViewModelClass().uploadFile(myURL: myURL, extensionStr: ".xls")
+            ViewModelClass().uploadFile(userID: userID, myURL: myURL, extensionStr: ".xls")
                 }
         else if last == "jpg"{
-            ViewModelClass().uploadFile(myURL: myURL, extensionStr: ".xls")
+            ViewModelClass().uploadFile(userID: userID, myURL: myURL, extensionStr: ".xls")
                 }
     
     func documentPicker(controller: UIDocumentPickerViewController, didPickDocumentAtURL url: NSURL) {
@@ -122,7 +126,7 @@ extension ViewController : UIImagePickerControllerDelegate,UINavigationControlle
         }
        
         indicator.startAnimating()
-        storageRef.child("Document").child(UUID().uuidString + ".jpg").putData(data, metadata: nil) { [weak self] storageData, error in
+        storageRef.child(userID!).child("Document").child(UUID().uuidString + ".jpg").putData(data, metadata: nil) { [weak self] storageData, error in
             self?.imageArr.append(data)
             self?.indicator.stopAnimating()
         }
